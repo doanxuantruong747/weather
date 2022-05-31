@@ -22,7 +22,6 @@ function Weather() {
                 const response = await fetch(url);
                 const data = await response.json();
                 if (response.ok) {
-                    //setInfoSearch(JSON.stringify(data));
                     setInfoSearch(
                         <>
                             <div>
@@ -33,10 +32,7 @@ function Weather() {
                             </div>
 
                         </>
-                        // `${data.name},${data.sys.country} 
-                        // ${data.weather[0].description}`
                     )
-                    console.log(infoSearch)
                 } else { setInfoSearch(data.message) }
 
 
